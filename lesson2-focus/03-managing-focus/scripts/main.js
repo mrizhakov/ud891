@@ -1,5 +1,6 @@
 page('/', function() {
   page.redirect('/what-is-vegemite');
+  document.getElementById('what-is-vegemite-header').focus();
 });
 
 page('/:slug', function(context) {
@@ -18,6 +19,7 @@ page('/:slug', function(context) {
   var newPage = document.querySelector('main [data-page='+slug+']');
   newMenuItem.classList.add('is-active');
   newPage.classList.add('is-active');
+  document.getElementById(slug+'-header').focus();
 
 });
 
@@ -25,13 +27,4 @@ page({
   hashbang: true
 });
 
-document.getElementById('what-is-vegemite-tab').addEventListener('click', function(){
-  document.getElementById('what-is-vegemite-header').focus();
-});
-document.getElementById('recipes-tab').addEventListener('click', function(){
-  document.getElementById('recipes-header').focus();
-});
-document.getElementById('ingredients-tab').addEventListener('click', function(){
-  document.getElementById('ingredients-header').focus();
-});
 
