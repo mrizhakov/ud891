@@ -24,3 +24,14 @@ page('/:slug', function(context) {
 page({
   hashbang: true
 });
+
+document.getElementById('what-is-vegemite-tab').addEventListener('click', function(){
+  document.getElementById('what-is-vegemite-header').focus();
+});
+document.getElementById('recipes-tab').addEventListener('click', function(){
+  document.getElementById('recipes-header').focus();
+});
+document.getElementById('ingredients-tab').addEventListener('click', function(){
+  document.getElementById('ingredients-header').focus();
+});
+
